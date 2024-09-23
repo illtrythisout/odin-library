@@ -36,7 +36,57 @@ input, button, textarea, select {
   font-weight: 600;
 }
 
-.bookContainer {
-  width: 100px;
-  background-color: aqua;
+#bookshelf {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 16rem);
+  grid-auto-rows: 22rem;
+  gap: 20px;
+  justify-content: center;
+}
+
+.book {
+  --book-border-radius: calc(0.05*16rem);
+
+  background-color: #082f49;
+  border-radius: var(--book-border-radius);
+  padding-left: 3rem;
+  height: 100%;
+  box-shadow: 0px 0px 10px 2px #9ca3af;
+  transition: box-shadow 0.3s;
+}
+.book:hover {
+  box-shadow: 0px 0px 10px 4px #9ca3af;
+}
+.bookCover {
+  background-color: #0891b2;
+  height: 100%;
+  border-radius: 0 var(--book-border-radius) var(--book-border-radius) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+.bookCover p {
+  text-align: center;
+}
+.bookCover .bookInfo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 1rem;
+}
+.bookCover .title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.bookCover .pages {
+  margin-top: auto;
 }

@@ -22,17 +22,21 @@ function displayBook(bookObj) {
 
     const bookCover = document.createElement("div");
     bookCover.classList.add("bookCover");
-    bookContainer.appendChild(bookCover);
+    book.appendChild(bookCover);
+
+    const bookInfo = document.createElement("div");
+    bookInfo.classList.add("bookInfo");
+    bookCover.appendChild(bookInfo);
 
     const title = document.createElement("p");
     title.classList.add("title");
     title.textContent = bookObj.title;
-    bookCover.appendChild(title);
+    bookInfo.appendChild(title);
 
     const author = document.createElement("p");
     author.classList.add("author");
     author.textContent = bookObj.author;
-    bookCover.appendChild(author);
+    bookInfo.appendChild(author);
 
     const pages = document.createElement("p");
     pages.classList.add("pages");
