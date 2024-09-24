@@ -47,7 +47,11 @@ input, button, textarea, select {
   gap: 20px;
   justify-content: center;
 }
-
+.book.read::before {
+  content: url(./icons/read-bookmark.svg);
+  position: absolute;
+  right: 2rem;
+}
 .book {
   --book-border-radius: calc(0.05*16rem);
 
@@ -57,6 +61,8 @@ input, button, textarea, select {
   height: 100%;
   box-shadow: 0px 0px 10px 2px #9ca3af;
   transition: box-shadow 0.3s;
+
+  position: relative;
 }
 .book:hover {
   box-shadow: 0px 0px 10px 4px #9ca3af;
