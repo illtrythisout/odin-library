@@ -9,21 +9,29 @@
 </head>
 <body>
     <header>
+        <h1>My Library</h1>
+        <button id="openBtn">Add Book</button>
     </header>
     <section id="bookshelf">
-        <div class="bookContainer">
-            <div class="book read">
-                <div class="bookCover">
-                    <div class="bookInfo">
-                        <p class="title">The Curious Incident of the Dog in the NightTime</p>
-                        <p class="author">Mark Haddon</p>
-                    </div>
-                    <p class="pages">234</p>
-                </div>
-            </div>
-            <button type="button" class="removeBook">Remove Book</button>
-            <input type="checkbox" class="readStatus" checked>
-        </div>
     </section>
+    <dialog>
+        <form>
+            <h2>Add a book</h2>
+
+            <fieldset class="inputs">
+                <label for="bookInput" autofocus></label>
+                <input type="text" id="bookInput" required>
+                <label for="authorInput"></label>
+                <input type="text" id="authorInput" required>
+                <label for="pageInput"></label>
+                <input type="number" id="pageInput" required>
+            </fieldset>
+            
+            <fieldset class="inputActions">
+                <button id="cancelBtn" value="cancel">Cancel</button>
+                <button id="submitBtn">Add Book</button>
+            </fieldset>
+        </form>
+    </dialog>
 </body>
 </html>
